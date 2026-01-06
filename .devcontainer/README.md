@@ -8,9 +8,20 @@ This repository is configured to work with GitHub Codespaces.
 - All dependencies from `requirements.txt` installed automatically
 - VS Code Python extensions pre-installed
 
-## Note About PyAudio
+## Important Notes
 
-PyAudio requires system-level PortAudio installation. In Codespaces, you may need to:
+### GUI Application Limitation
+
+**This application uses Tkinter for the GUI, which requires a display server.** Codespaces runs in a browser and doesn't have a native display, so the GUI won't work directly.
+
+**Options:**
+1. **Use X11 forwarding** (if supported by your Codespaces setup)
+2. **Run locally** for full functionality (recommended)
+3. **Convert to web-based UI** (future enhancement)
+
+### PyAudio Installation
+
+PyAudio requires system-level PortAudio installation. In Codespaces:
 
 ```bash
 sudo apt-get update
@@ -22,11 +33,11 @@ Or the application will run without microphone features (with a warning message)
 
 ## Running the Application
 
-Once the Codespace is ready:
-
+**For full functionality, run locally:**
 ```bash
 python quran_memorization_tool.py
 ```
 
-The GUI will open in the Codespace. You can use port forwarding to access it.
+**In Codespaces (for testing code only):**
+The GUI won't display, but you can test the code logic and imports.
 
