@@ -1,0 +1,5 @@
+speechrecognition==3.10.0
+pygame==2.5.2
+pyaudio==0.2.14
+numpy==1.24.3
+
