@@ -21,8 +21,8 @@ A Python GUI application for practicing Quran recitation with real-time speech r
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/quran-memorization-tool.git
-cd quran-memorization-tool
+git clone https://github.com/ahmadafzalt/Quran-memorisation-tool.git
+cd Quran-memorisation-tool
 ```
 
 2. Create virtual environment:
@@ -42,8 +42,11 @@ pip install -r requirements.txt
 brew install portaudio
 pip install pyaudio
 
-# Or use the provided installation script
-./install_portaudio_fixed.sh
+# Linux
+sudo apt-get install portaudio19-dev python3-pyaudio
+pip install pyaudio
+
+# Windows
 pip install pyaudio
 ```
 
