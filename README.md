@@ -19,6 +19,23 @@ A Python GUI application for practicing Quran recitation with real-time speech r
 
 ## Installation
 
+### Option 1: GitHub Codespaces (Recommended)
+
+1. Click the green "Code" button on GitHub
+2. Select "Codespaces" tab
+3. Click "Create codespace on main"
+4. Wait for the environment to set up (dependencies install automatically)
+5. Run: `python quran_memorization_tool.py`
+
+**Note:** For microphone support in Codespaces, run:
+```bash
+sudo apt-get update
+sudo apt-get install -y portaudio19-dev python3-pyaudio
+pip install pyaudio
+```
+
+### Option 2: Local Installation
+
 1. Clone the repository:
 ```bash
 git clone https://github.com/ahmadafzalt/Quran-memorisation-tool.git
