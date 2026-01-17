@@ -389,8 +389,9 @@ class QuranMemorizationTool:
                             self.root.after(0, self.startPracticeForSurah, surahNum)
                             break
                         else:
-                            self.root.after(0, lambda: self.feedbackLabel.config(
-                                text=f"Could not detect surah from '{recognizedText}'. Please say the surah name again (e.g., 'Al-Fatiha', 'الفاتحة', or '1').",
+                            recText = recognizedText
+                            self.root.after(0, lambda txt=recText: self.feedbackLabel.config(
+                                text=f"Could not detect surah from '{txt}'. Please say the surah name again (e.g., 'Al-Fatiha', 'الفاتحة', or '1').",
                                 fg="#e74c3c"
                             ))
                     else:
@@ -412,8 +413,9 @@ class QuranMemorizationTool:
                         ))
                     pass
                 except sr.RequestError as e:
-                    self.root.after(0, lambda: self.feedbackLabel.config(
-                        text=f"Error with speech recognition service: {str(e)}",
+                    errorMsg = str(e)
+                    self.root.after(0, lambda msg=errorMsg: self.feedbackLabel.config(
+                        text=f"Error with speech recognition service: {msg}",
                         fg="#e74c3c"
                     ))
                     
@@ -421,8 +423,9 @@ class QuranMemorizationTool:
                 continue
             except Exception as e:
                 if self.isListening:
-                    self.root.after(0, lambda: self.feedbackLabel.config(
-                        text=f"Error: {str(e)}",
+                    errorMsg = str(e)
+                    self.root.after(0, lambda msg=errorMsg: self.feedbackLabel.config(
+                        text=f"Error: {msg}",
                         fg="#e74c3c"
                     ))
                 break

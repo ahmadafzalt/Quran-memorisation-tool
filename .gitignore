@@ -19,3 +19,34 @@ build/
 .idea/
 *.iml
 
+# Sensitive information
+*.env
+.env
+.env.local
+*.key
+*.pem
+*.p12
+*.pfx
+config.ini
+secrets.json
+credentials.json
+*.token
+*_token.txt
+*_password.txt
+*_secret.txt
+*.secret
+
+# API keys and tokens
+*api_key*
+*apikey*
+*token*
+*password*
+*secret*
+*credential*
+
+# Personal documentation (not for public repo)
+TECHNICAL_DOCUMENTATION.md
+PUSH_INSTRUCTIONS.md
+*_INSTRUCTIONS.md
+*_NOTES.md
+
